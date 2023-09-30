@@ -6,6 +6,13 @@
 # All it needs to do is build all *.c files in the micropython_embed directory.
 # This makefile would be replaced with your custom build system.
 
+CFLAGS += \
+	-DMICROPY_NLR_SETJMP=0 -D__x86_64__=1 \
+	-D_WASI_EMULATED_MMAN -D_WASI_EMULATED_SIGNAL
+LDFLAGS += -lwasi-emulated-mman -lwasi-emulated-signal
+
+CC = /opt/wasi-sdk/bin/clang
+
 EMBED_DIR = micropython_embed
 PROG = embed
 
