@@ -60,6 +60,7 @@ set(MICROPY_SOURCE_PY
     ${MICROPY_PY_DIR}/nlrx64.c
     ${MICROPY_PY_DIR}/nlrx86.c
     ${MICROPY_PY_DIR}/nlrxtensa.c
+    ${MICROPY_PY_DIR}/nlrwasm.c
     ${MICROPY_PY_DIR}/obj.c
     ${MICROPY_PY_DIR}/objarray.c
     ${MICROPY_PY_DIR}/objattrtuple.c

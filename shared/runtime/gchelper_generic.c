@@ -30,6 +30,8 @@
 #include "py/gc.h"
 #include "shared/runtime/gchelper.h"
 
+#include "logger.h"
+
 #if MICROPY_ENABLE_GC
 
 // Even if we have specific support for an architecture, it is
@@ -148,6 +150,12 @@ STATIC void gc_helper_get_regs(gc_helper_regs_t arr) {
     arr[8] = x27;
     arr[9] = x28;
     arr[10] = x29;
+}
+#elif defined(__wasm__)
+
+STATIC void gc_helper_get_regs(gc_helper_regs_t arr) {
+    // TODO: implement
+    LOG_DBG("in gc_helper_get_regs");
 }
 
 #else
