@@ -13,3 +13,8 @@
 #define MICROPY_ENABLE_COMPILER                 (1)
 #define MICROPY_ENABLE_GC                       (1)
 #define MICROPY_PY_GC                           (1)
+
+#define MICROPY_NLR_SETJMP                      (0)
+
+#define MICROPY_DEBUG_VERBOSE                   (1)
+#define MICROPY_DEBUG_PRINTERS                  (1)

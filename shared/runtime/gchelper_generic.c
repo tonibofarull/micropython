@@ -155,7 +155,7 @@ STATIC void gc_helper_get_regs(gc_helper_regs_t arr) {
 
 STATIC void gc_helper_get_regs(gc_helper_regs_t arr) {
     // TODO: implement
-    LOG_DBG("in gc_helper_get_regs");
+    LOG_INFO("in gc_helper_get_regs");
 }
 
 #else

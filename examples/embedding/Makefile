@@ -6,11 +6,10 @@
 # All it needs to do is build all *.c files in the micropython_embed directory.
 # This makefile would be replaced with your custom build system.
 
-WASI ?= 0
+WASI ?= 1
 
 CFLAGS += \
-	-DLOG_LEVEL_ENABLED=3 \
-	-DMICROPY_NLR_SETJMP=0
+	-DLOG_LEVEL_ENABLED=0
 
 ifeq ($(WASI),1)
 CFLAGS += \

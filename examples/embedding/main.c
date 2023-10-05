@@ -4,43 +4,40 @@
  */
 
 #include <stdio.h>
-#include "port/micropython_embed.h"
+#include <stdarg.h>
 
-// This is example 1 script, which will be compiled and executed.
-static const char *example_1 =
-"a = [2**x for x in range(10)]\n"
-"print(a)\n"
-"\n"
-"def fib(n):\n"
-"    if n <= 0:\n"
-"        return 0\n"
-"    if n <= 2:\n"
-"        return 1\n"
-"    return fib(n-1)+fib(n-2)\n"
-"print(fib(5))\n"
-"print(fib(19))\n"
-"class A:\n"
-"    def __init__(self):\n"
-"        self.x = fib(19)\n"
-"a = A()\n"
-"print(a.x+1)"
+#include "port/micropython_embed.h"
+#include "py/gc.h"
+#include "logger.h"
+
+int DEBUG_printf(const char *fmt, ...) {
+    va_list ap;
+    va_start(ap, fmt);
+    int ret = vprintf(fmt, ap);
+    va_end(ap);
+    return ret;
+}
+
+static const char *code1 =
+"print('hi')\n"
+"dummy_data = bytes(2000)\n"
+;
+
+static const char *code2 =
+"print('bye')"
 ;
 
 // This array is the MicroPython GC heap.
-static char heap[8 * 1024];
+static char heap[ 8 * 1024 ] = { 0 };
 
 int main() {
-    // Initialise MicroPython.
-    // printf("here\n"); fflush(stdout);
     mp_embed_init(&heap[0], sizeof(heap));
-    // printf("here\n"); fflush(stdout);
-    // Run the example scripts (they will be compiled first).
-    mp_embed_exec_str(example_1);
-    // printf("here\n"); fflush(stdout);
-    // mp_embed_exec_str(example_2);
-
-    // Deinitialise MicroPython.
+    for (int i = 0; i < 10; ++i) {
+        mp_embed_exec_str(code1);
+        mp_embed_exec_str(code2);
+        LOG_INFO("###############################################################");
+        gc_dump_info(&mp_plat_print);
+    }
     mp_embed_deinit();
-
     return 0;
 }
