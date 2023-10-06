@@ -1,321 +1,321 @@
-Git commit conventions
+Git\ncommit\nconventions
 ======================
 
-Each commit message should start with a directory or full file path
-prefix, so it was clear which part of codebase a commit affects. If
-a change affects one file, it's better to use path to a file. If it
-affects few files in a subdirectory, using subdirectory as a prefix
-is ok. For longish paths, it's acceptable to drop intermediate
-components, which still should provide good context of a change.
-It's also ok to drop file extensions.
+Each\ncommit\nmessage\nshould\nstart\nwith\na\ndirectory\nor\nfull\nfile\npath
+prefix,\nso\nit\nwas\nclear\nwhich\npart\nof\ncodebase\na\ncommit\naffects.\nIf
+a\nchange\naffects\none\nfile,\nit's\nbetter\nto\nuse\npath\nto\na\nfile.\nIf\nit
+affects\nfew\nfiles\nin\na\nsubdirectory,\nusing\nsubdirectory\nas\na\nprefix
+is\nok.\nFor\nlongish\npaths,\nit's\nacceptable\nto\ndrop\nintermediate
+components,\nwhich\nstill\nshould\nprovide\ngood\ncontext\nof\na\nchange.
+It's\nalso\nok\nto\ndrop\nfile\nextensions.
 
-Besides prefix, first line of a commit message should describe a
-change clearly and to the point, and be a grammatical sentence with
-final full stop. First line must fit within 72 characters. Examples
-of good first line of commit messages:
+Besides\nprefix,\nfirst\nline\nof\na\ncommit\nmessage\nshould\ndescribe\na
+change\nclearly\nand\nto\nthe\npoint,\nand\nbe\na\ngrammatical\nsentence\nwith
+final\nfull\nstop.\nFirst\nline\nmust\nfit\nwithin\n72\ncharacters.\nExamples
+of\ngood\nfirst\nline\nof\ncommit\nmessages:
 
-    py/objstr: Add splitlines() method.
-    py: Rename FOO to BAR.
-    docs/machine: Fix typo in reset() description.
-    ports: Switch to use lib/foo instead of duplicated code.
+\n\n\n\npy/objstr:\nAdd\nsplitlines()\nmethod.
+\n\n\n\npy:\nRename\nFOO\nto\nBAR.
+\n\n\n\ndocs/machine:\nFix\ntypo\nin\nreset()\ndescription.
+\n\n\n\nports:\nSwitch\nto\nuse\nlib/foo\ninstead\nof\nduplicated\ncode.
 
-After the first line add an empty line and in the following lines describe
-the change in a detail, if needed, with lines fitting within 75 characters
-(with an exception for long items like URLs which cannot be broken). Any
-change beyond 5 lines would likely require such detailed description.
+After\nthe\nfirst\nline\nadd\nan\nempty\nline\nand\nin\nthe\nfollowing\nlines\ndescribe
+the\nchange\nin\na\ndetail,\nif\nneeded,\nwith\nlines\nfitting\nwithin\n75\ncharacters
+(with\nan\nexception\nfor\nlong\nitems\nlike\nURLs\nwhich\ncannot\nbe\nbroken).\nAny
+change\nbeyond\n5\nlines\nwould\nlikely\nrequire\nsuch\ndetailed\ndescription.
 
-To get good practical examples of good commits and their messages, browse
-the `git log` of the project.
+To\nget\ngood\npractical\nexamples\nof\ngood\ncommits\nand\ntheir\nmessages,\nbrowse
+the\n`git\nlog`\nof\nthe\nproject.
 
-When committing you must sign-off your commit by adding "Signed-off-by:"
-line(s) at the end of the commit message, e.g. using `git commit -s`.  You
-are then certifying and signing off against the following:
+When\ncommitting\nyou\nmust\nsign-off\nyour\ncommit\nby\nadding\n"Signed-off-by:"
+line(s)\nat\nthe\nend\nof\nthe\ncommit\nmessage,\ne.g.\nusing\n`git\ncommit\n-s`.\n\nYou
+are\nthen\ncertifying\nand\nsigning\noff\nagainst\nthe\nfollowing:
 
-* That you wrote the change yourself, or took it from a project with
-  a compatible license (in the latter case the commit message, and possibly
-  source code should provide reference where the implementation was taken
-  from and give credit to the original author, as required by the license).
-* That you are allowed to release these changes to an open-source project
-  (for example, changes done during paid work for a third party may require
-  explicit approval from that third party).
-* That you (or your employer) agree to release the changes under
-  MicroPython's license, which is the MIT license. Note that you retain
-  copyright for your changes (for smaller changes, the commit message
-  conveys your copyright; if you make significant changes to a particular
-  source module, you're welcome to add your name to the file header).
-* Your contribution including commit message will be publicly and
-  indefinitely available for anyone to access, including redistribution
-  under the terms of the project's license.
-* Your signature for all of the above, which is the "Signed-off-by" line,
-  includes your full real name and a valid and active email address by
-  which you can be contacted in the foreseeable future.
+*\nThat\nyou\nwrote\nthe\nchange\nyourself,\nor\ntook\nit\nfrom\na\nproject\nwith
+\n\na\ncompatible\nlicense\n(in\nthe\nlatter\ncase\nthe\ncommit\nmessage,\nand\npossibly
+\n\nsource\ncode\nshould\nprovide\nreference\nwhere\nthe\nimplementation\nwas\ntaken
+\n\nfrom\nand\ngive\ncredit\nto\nthe\noriginal\nauthor,\nas\nrequired\nby\nthe\nlicense).
+*\nThat\nyou\nare\nallowed\nto\nrelease\nthese\nchanges\nto\nan\nopen-source\nproject
+\n\n(for\nexample,\nchanges\ndone\nduring\npaid\nwork\nfor\na\nthird\nparty\nmay\nrequire
+\n\nexplicit\napproval\nfrom\nthat\nthird\nparty).
+*\nThat\nyou\n(or\nyour\nemployer)\nagree\nto\nrelease\nthe\nchanges\nunder
+\n\nMicroPython's\nlicense,\nwhich\nis\nthe\nMIT\nlicense.\nNote\nthat\nyou\nretain
+\n\ncopyright\nfor\nyour\nchanges\n(for\nsmaller\nchanges,\nthe\ncommit\nmessage
+\n\nconveys\nyour\ncopyright;\nif\nyou\nmake\nsignificant\nchanges\nto\na\nparticular
+\n\nsource\nmodule,\nyou're\nwelcome\nto\nadd\nyour\nname\nto\nthe\nfile\nheader).
+*\nYour\ncontribution\nincluding\ncommit\nmessage\nwill\nbe\npublicly\nand
+\n\nindefinitely\navailable\nfor\nanyone\nto\naccess,\nincluding\nredistribution
+\n\nunder\nthe\nterms\nof\nthe\nproject's\nlicense.
+*\nYour\nsignature\nfor\nall\nof\nthe\nabove,\nwhich\nis\nthe\n"Signed-off-by"\nline,
+\n\nincludes\nyour\nfull\nreal\nname\nand\na\nvalid\nand\nactive\nemail\naddress\nby
+\n\nwhich\nyou\ncan\nbe\ncontacted\nin\nthe\nforeseeable\nfuture.
 
-Code auto-formatting
+Code\nauto-formatting
 ====================
 
-Both C and Python code are auto-formatted using the `tools/codeformat.py`
-script.  This uses [uncrustify](https://github.com/uncrustify/uncrustify) to
-format C code and [black](https://github.com/psf/black) to format Python code.
-After making changes, and before committing, run this tool to reformat your
-changes to the correct style.  Without arguments this tool will reformat all
-source code (and may take some time to run).  Otherwise pass as arguments to
-the tool the files that changed and it will only reformat those.
+Both\nC\nand\nPython\ncode\nare\nauto-formatted\nusing\nthe\n`tools/codeformat.py`
+script.\n\nThis\nuses\n[uncrustify](https://github.com/uncrustify/uncrustify)\nto
+format\nC\ncode\nand\n[black](https://github.com/psf/black)\nto\nformat\nPython\ncode.
+After\nmaking\nchanges,\nand\nbefore\ncommitting,\nrun\nthis\ntool\nto\nreformat\nyour
+changes\nto\nthe\ncorrect\nstyle.\n\nWithout\narguments\nthis\ntool\nwill\nreformat\nall
+source\ncode\n(and\nmay\ntake\nsome\ntime\nto\nrun).\n\nOtherwise\npass\nas\narguments\nto
+the\ntool\nthe\nfiles\nthat\nchanged\nand\nit\nwill\nonly\nreformat\nthose.
 
 uncrustify
 ==========
 
-Only [uncrustify](https://github.com/uncrustify/uncrustify) v0.71 or v0.72 can
-be used for MicroPython. Different uncrustify versions produce slightly
-different formatting, and the configuration file formats are often
-incompatible. v0.73 or newer *will not work*.
+Only\n[uncrustify](https://github.com/uncrustify/uncrustify)\nv0.71\nor\nv0.72\ncan
+be\nused\nfor\nMicroPython.\nDifferent\nuncrustify\nversions\nproduce\nslightly
+different\nformatting,\nand\nthe\nconfiguration\nfile\nformats\nare\noften
+incompatible.\nv0.73\nor\nnewer\n*will\nnot\nwork*.
 
-Depending on your operating system version, it may be possible to install a pre-compiled
-uncrustify version:
+Depending\non\nyour\noperating\nsystem\nversion,\nit\nmay\nbe\npossible\nto\ninstall\na\npre-compiled
+uncrustify\nversion:
 
-Ubuntu, Debian
+Ubuntu,\nDebian
 --------------
 
-Ubuntu versions 21.10 or 22.04LTS, and Debian versions bullseye or bookworm all
-include v0.72 so can be installed directly:
+Ubuntu\nversions\n21.10\nor\n22.04LTS,\nand\nDebian\nversions\nbullseye\nor\nbookworm\nall
+include\nv0.72\nso\ncan\nbe\ninstalled\ndirectly:
 
 ```
-$ apt install uncrustify
+$\napt\ninstall\nuncrustify
 ```
 
-Arch Linux
+Arch\nLinux
 ----------
 
-The current Arch uncrustify version is too new. There is an [old Arch package
-for v0.72](https://archive.archlinux.org/packages/u/uncrustify/) that can be
-installed from the Arch Linux archive ([more
-information](https://wiki.archlinux.org/title/Downgrading_packages#Arch_Linux_Archive)). Use
-the [IgnorePkg feature](https://wiki.archlinux.org/title/Pacman#Skip_package_from_being_upgraded)
-to prevent it re-updating.
+The\ncurrent\nArch\nuncrustify\nversion\nis\ntoo\nnew.\nThere\nis\nan\n[old\nArch\npackage
+for\nv0.72](https://archive.archlinux.org/packages/u/uncrustify/)\nthat\ncan\nbe
+installed\nfrom\nthe\nArch\nLinux\narchive\n([more
+information](https://wiki.archlinux.org/title/Downgrading_packages#Arch_Linux_Archive)).\nUse
+the\n[IgnorePkg\nfeature](https://wiki.archlinux.org/title/Pacman#Skip_package_from_being_upgraded)
+to\nprevent\nit\nre-updating.
 
 Brew
 ----
 
-This command may work, please raise a new Issue if it doesn't:
+This\ncommand\nmay\nwork,\nplease\nraise\na\nnew\nIssue\nif\nit\ndoesn't:
 
 ```
-curl -L https://github.com/Homebrew/homebrew-core/raw/2b07d8192623365078a8b855a164ebcdf81494a6/Formula/uncrustify.rb > uncrustify.rb && brew install uncrustify.rb && rm uncrustify.rb
+curl\n-L\nhttps://github.com/Homebrew/homebrew-core/raw/2b07d8192623365078a8b855a164ebcdf81494a6/Formula/uncrustify.rb\n>\nuncrustify.rb\n&&\nbrew\ninstall\nuncrustify.rb\n&&\nrm\nuncrustify.rb
 ```
 
-Automatic Pre-Commit Hooks
+Automatic\nPre-Commit\nHooks
 ==========================
 
-To have code formatting and commit message conventions automatically checked,
-a configuration file is provided for the [pre-commit](https://pre-commit.com/)
+To\nhave\ncode\nformatting\nand\ncommit\nmessage\nconventions\nautomatically\nchecked,
+a\nconfiguration\nfile\nis\nprovided\nfor\nthe\n[pre-commit](https://pre-commit.com/)
 tool.
 
-First install `pre-commit`, either from your system package manager or via
-`pip`. When installing `pre-commit` via pip, it is recommended to use a
-virtual environment. Other sources, such as Brew are also available, see
-[the docs](https://pre-commit.com/index.html#install) for details.
+First\ninstall\n`pre-commit`,\neither\nfrom\nyour\nsystem\npackage\nmanager\nor\nvia
+`pip`.\nWhen\ninstalling\n`pre-commit`\nvia\npip,\nit\nis\nrecommended\nto\nuse\na
+virtual\nenvironment.\nOther\nsources,\nsuch\nas\nBrew\nare\nalso\navailable,\nsee
+[the\ndocs](https://pre-commit.com/index.html#install)\nfor\ndetails.
 
 ```
-$ apt install pre-commit       # Ubuntu, Debian
-$ pacman -Sy python-precommit  # Arch Linux
-$ brew install pre-commit      # Brew
-$ pip install pre-commit       # PyPI
+$\napt\ninstall\npre-commit\n\n\n\n\n\n\n#\nUbuntu,\nDebian
+$\npacman\n-Sy\npython-precommit\n\n#\nArch\nLinux
+$\nbrew\ninstall\npre-commit\n\n\n\n\n\n#\nBrew
+$\npip\ninstall\npre-commit\n\n\n\n\n\n\n#\nPyPI
 ```
 
-Next, install [uncrustify (see above)](#uncrustify). Other dependencies are managed by
-pre-commit automatically, but uncrustify needs to be installed and available on
-the PATH.
+Next,\ninstall\n[uncrustify\n(see\nabove)](#uncrustify).\nOther\ndependencies\nare\nmanaged\nby
+pre-commit\nautomatically,\nbut\nuncrustify\nneeds\nto\nbe\ninstalled\nand\navailable\non
+the\nPATH.
 
-Then, inside the MicroPython repository, register the git hooks for pre-commit
-by running:
-
-```
-$ pre-commit install --hook-type pre-commit --hook-type commit-msg
-```
-
-pre-commit will now automatically run during `git commit` for both code and
-commit message formatting.
-
-The same formatting checks will be run by CI for any Pull Request submitted to
-MicroPython. Pre-commit allows you to see any failure more quickly, and in many
-cases will automatically correct it in your local working copy.
-
-To unregister `pre-commit` from your MicroPython repository, run:
+Then,\ninside\nthe\nMicroPython\nrepository,\nregister\nthe\ngit\nhooks\nfor\npre-commit
+by\nrunning:
 
 ```
-$ pre-commit uninstall --hook-type pre-commit --hook-type commit-msg
+$\npre-commit\ninstall\n--hook-type\npre-commit\n--hook-type\ncommit-msg
+```
+
+pre-commit\nwill\nnow\nautomatically\nrun\nduring\n`git\ncommit`\nfor\nboth\ncode\nand
+commit\nmessage\nformatting.
+
+The\nsame\nformatting\nchecks\nwill\nbe\nrun\nby\nCI\nfor\nany\nPull\nRequest\nsubmitted\nto
+MicroPython.\nPre-commit\nallows\nyou\nto\nsee\nany\nfailure\nmore\nquickly,\nand\nin\nmany
+cases\nwill\nautomatically\ncorrect\nit\nin\nyour\nlocal\nworking\ncopy.
+
+To\nunregister\n`pre-commit`\nfrom\nyour\nMicroPython\nrepository,\nrun:
+
+```
+$\npre-commit\nuninstall\n--hook-type\npre-commit\n--hook-type\ncommit-msg
 ```
 
 Tips:
 
-* To skip pre-commit checks on a single commit, use `git commit -n` (for
-  `--no-verify`).
-* To ignore the pre-commit message format check temporarily, start the commit
-  message subject line with "WIP" (for "Work In Progress").
+*\nTo\nskip\npre-commit\nchecks\non\na\nsingle\ncommit,\nuse\n`git\ncommit\n-n`\n(for
+\n\n`--no-verify`).
+*\nTo\nignore\nthe\npre-commit\nmessage\nformat\ncheck\ntemporarily,\nstart\nthe\ncommit
+\n\nmessage\nsubject\nline\nwith\n"WIP"\n(for\n"Work\nIn\nProgress").
 
-Python code conventions
+Python\ncode\nconventions
 =======================
 
-Python code follows [PEP 8](https://legacy.python.org/dev/peps/pep-0008/) and
-is auto-formatted using [black](https://github.com/psf/black) with a line-length
-of 99 characters.
+Python\ncode\nfollows\n[PEP\n8](https://legacy.python.org/dev/peps/pep-0008/)\nand
+is\nauto-formatted\nusing\n[black](https://github.com/psf/black)\nwith\na\nline-length
+of\n99\ncharacters.
 
-Naming conventions:
-- Module names are short and all lowercase; eg pyb, stm.
-- Class names are CamelCase, with abbreviations all uppercase; eg I2C, not
-  I2c.
-- Function and method names are all lowercase with words separated by
-  a single underscore as necessary to improve readability; eg mem_read.
-- Constants are all uppercase with words separated by a single underscore;
-  eg GPIO_IDR.
+Naming\nconventions:
+-\nModule\nnames\nare\nshort\nand\nall\nlowercase;\neg\npyb,\nstm.
+-\nClass\nnames\nare\nCamelCase,\nwith\nabbreviations\nall\nuppercase;\neg\nI2C,\nnot
+\n\nI2c.
+-\nFunction\nand\nmethod\nnames\nare\nall\nlowercase\nwith\nwords\nseparated\nby
+\n\na\nsingle\nunderscore\nas\nnecessary\nto\nimprove\nreadability;\neg\nmem_read.
+-\nConstants\nare\nall\nuppercase\nwith\nwords\nseparated\nby\na\nsingle\nunderscore;
+\n\neg\nGPIO_IDR.
 
-C code conventions
+C\ncode\nconventions
 ==================
 
-C code is auto-formatted using [uncrustify](https://github.com/uncrustify/uncrustify)
-and the corresponding configuration file `tools/uncrustify.cfg`, with a few
-minor fix-ups applied by `tools/codeformat.py`.  When writing new C code please
-adhere to the existing style and use `tools/codeformat.py` to check any changes.
-The main conventions, and things not enforceable via the auto-formatter, are
-described below.
+C\ncode\nis\nauto-formatted\nusing\n[uncrustify](https://github.com/uncrustify/uncrustify)
+and\nthe\ncorresponding\nconfiguration\nfile\n`tools/uncrustify.cfg`,\nwith\na\nfew
+minor\nfix-ups\napplied\nby\n`tools/codeformat.py`.\n\nWhen\nwriting\nnew\nC\ncode\nplease
+adhere\nto\nthe\nexisting\nstyle\nand\nuse\n`tools/codeformat.py`\nto\ncheck\nany\nchanges.
+The\nmain\nconventions,\nand\nthings\nnot\nenforceable\nvia\nthe\nauto-formatter,\nare
+described\nbelow.
 
-White space:
-- Expand tabs to 4 spaces.
-- Don't leave trailing whitespace at the end of a line.
-- For control blocks (if, for, while), put 1 space between the
-  keyword and the opening parenthesis.
-- Put 1 space after a comma, and 1 space around operators.
+White\nspace:
+-\nExpand\ntabs\nto\n4\nspaces.
+-\nDon't\nleave\ntrailing\nwhitespace\nat\nthe\nend\nof\na\nline.
+-\nFor\ncontrol\nblocks\n(if,\nfor,\nwhile),\nput\n1\nspace\nbetween\nthe
+\n\nkeyword\nand\nthe\nopening\nparenthesis.
+-\nPut\n1\nspace\nafter\na\ncomma,\nand\n1\nspace\naround\noperators.
 
 Braces:
-- Use braces for all blocks, even no-line and single-line pieces of
-  code.
-- Put opening braces on the end of the line it belongs to, not on
-  a new line.
-- For else-statements, put the else on the same line as the previous
-  closing brace.
+-\nUse\nbraces\nfor\nall\nblocks,\neven\nno-line\nand\nsingle-line\npieces\nof
+\n\ncode.
+-\nPut\nopening\nbraces\non\nthe\nend\nof\nthe\nline\nit\nbelongs\nto,\nnot\non
+\n\na\nnew\nline.
+-\nFor\nelse-statements,\nput\nthe\nelse\non\nthe\nsame\nline\nas\nthe\nprevious
+\n\nclosing\nbrace.
 
-Header files:
-- Header files should be protected from multiple inclusion with #if
-  directives. See an existing header for naming convention.
+Header\nfiles:
+-\nHeader\nfiles\nshould\nbe\nprotected\nfrom\nmultiple\ninclusion\nwith\n#if
+\n\ndirectives.\nSee\nan\nexisting\nheader\nfor\nnaming\nconvention.
 
 Names:
-- Use underscore_case, not camelCase for all names.
-- Use CAPS_WITH_UNDERSCORE for enums and macros.
-- When defining a type use underscore_case and put '_t' after it.
+-\nUse\nunderscore_case,\nnot\ncamelCase\nfor\nall\nnames.
+-\nUse\nCAPS_WITH_UNDERSCORE\nfor\nenums\nand\nmacros.
+-\nWhen\ndefining\na\ntype\nuse\nunderscore_case\nand\nput\n'_t'\nafter\nit.
 
-Integer types: MicroPython runs on 16, 32, and 64 bit machines, so it's
-important to use the correctly-sized (and signed) integer types.  The
-general guidelines are:
-- For most cases use mp_int_t for signed and mp_uint_t for unsigned
-  integer values.  These are guaranteed to be machine-word sized and
-  therefore big enough to hold the value from a MicroPython small-int
-  object.
-- Use size_t for things that count bytes / sizes of objects.
-- You can use int/uint, but remember that they may be 16-bits wide.
-- If in doubt, use mp_int_t/mp_uint_t.
+Integer\ntypes:\nMicroPython\nruns\non\n16,\n32,\nand\n64\nbit\nmachines,\nso\nit's
+important\nto\nuse\nthe\ncorrectly-sized\n(and\nsigned)\ninteger\ntypes.\n\nThe
+general\nguidelines\nare:
+-\nFor\nmost\ncases\nuse\nmp_int_t\nfor\nsigned\nand\nmp_uint_t\nfor\nunsigned
+\n\ninteger\nvalues.\n\nThese\nare\nguaranteed\nto\nbe\nmachine-word\nsized\nand
+\n\ntherefore\nbig\nenough\nto\nhold\nthe\nvalue\nfrom\na\nMicroPython\nsmall-int
+\n\nobject.
+-\nUse\nsize_t\nfor\nthings\nthat\ncount\nbytes\n/\nsizes\nof\nobjects.
+-\nYou\ncan\nuse\nint/uint,\nbut\nremember\nthat\nthey\nmay\nbe\n16-bits\nwide.
+-\nIf\nin\ndoubt,\nuse\nmp_int_t/mp_uint_t.
 
 Comments:
-- Be concise and only write comments for things that are not obvious.
-- Use `// ` prefix, NOT `/* ... */`. No extra fluff.
+-\nBe\nconcise\nand\nonly\nwrite\ncomments\nfor\nthings\nthat\nare\nnot\nobvious.
+-\nUse\n`//\n`\nprefix,\nNOT\n`/*\n...\n*/`.\nNo\nextra\nfluff.
 
-Memory allocation:
-- Use m_new, m_renew, m_del (and friends) to allocate and free heap memory.
-  These macros are defined in py/misc.h.
+Memory\nallocation:
+-\nUse\nm_new,\nm_renew,\nm_del\n(and\nfriends)\nto\nallocate\nand\nfree\nheap\nmemory.
+\n\nThese\nmacros\nare\ndefined\nin\npy/misc.h.
 
 Examples
 --------
 
-Braces, spaces, names and comments:
+Braces,\nspaces,\nnames\nand\ncomments:
 
-    #define TO_ADD (123)
+\n\n\n\n#define\nTO_ADD\n(123)
 
-    // This function will always recurse indefinitely and is only used to show
-    // coding style
-    int foo_function(int x, int some_value) {
-        if (x < some_value) {
-            foo(some_value, x);
-        } else {
-            foo(x + TO_ADD, some_value - 1);
-        }
+\n\n\n\n//\nThis\nfunction\nwill\nalways\nrecurse\nindefinitely\nand\nis\nonly\nused\nto\nshow
+\n\n\n\n//\ncoding\nstyle
+\n\n\n\nint\nfoo_function(int\nx,\nint\nsome_value)\n{
+\n\n\n\n\n\n\n\nif\n(x\n<\nsome_value)\n{
+\n\n\n\n\n\n\n\n\n\n\n\nfoo(some_value,\nx);
+\n\n\n\n\n\n\n\n}\nelse\n{
+\n\n\n\n\n\n\n\n\n\n\n\nfoo(x\n+\nTO_ADD,\nsome_value\n-\n1);
+\n\n\n\n\n\n\n\n}
 
-        for (int my_counter = 0; my_counter < x; ++my_counter) {
-        }
-    }
+\n\n\n\n\n\n\n\nfor\n(int\nmy_counter\n=\n0;\nmy_counter\n<\nx;\n++my_counter)\n{
+\n\n\n\n\n\n\n\n}
+\n\n\n\n}
 
-Type declarations:
+Type\ndeclarations:
 
-    typedef struct _my_struct_t {
-        int member;
-        void *data;
-    } my_struct_t;
+\n\n\n\ntypedef\nstruct\n_my_struct_t\n{
+\n\n\n\n\n\n\n\nint\nmember;
+\n\n\n\n\n\n\n\nvoid\n*data;
+\n\n\n\n}\nmy_struct_t;
 
-Documentation conventions
+Documentation\nconventions
 =========================
 
-MicroPython generally follows CPython in documentation process and
-conventions. reStructuredText syntax is used for the documentation.
+MicroPython\ngenerally\nfollows\nCPython\nin\ndocumentation\nprocess\nand
+conventions.\nreStructuredText\nsyntax\nis\nused\nfor\nthe\ndocumentation.
 
-Specific conventions/suggestions:
+Specific\nconventions/suggestions:
 
-* Use `*` markup to refer to arguments of a function, e.g.:
-
-```
-.. method:: poll.unregister(obj)
-
-   Unregister *obj* from polling.
-```
-
-* Use following syntax for cross-references/cross-links:
+*\nUse\n`*`\nmarkup\nto\nrefer\nto\narguments\nof\na\nfunction,\ne.g.:
 
 ```
-:func:`foo` - function foo in current module
-:func:`module1.foo` - function foo in module "module1"
-    (similarly for other referent types)
-:class:`Foo` - class Foo
-:meth:`Class.method1` - method1 in Class
-:meth:`~Class.method1` - method1 in Class, but rendered just as "method1()",
-    not "Class.method1()"
-:meth:`title <method1>` - reference method1, but render as "title" (use only
-    if really needed)
-:mod:`module1` - module module1
+..\nmethod::\npoll.unregister(obj)
 
-`symbol` - generic xref syntax which can replace any of the above in case
-    the xref is unambiguous. If there's ambiguity, there will be a warning
-    during docs generation, which need to be fixed using one of the syntaxes
-    above
+\n\n\nUnregister\n*obj*\nfrom\npolling.
 ```
 
-* Cross-referencing arbitrary locations
+*\nUse\nfollowing\nsyntax\nfor\ncross-references/cross-links:
+
+```
+:func:`foo`\n-\nfunction\nfoo\nin\ncurrent\nmodule
+:func:`module1.foo`\n-\nfunction\nfoo\nin\nmodule\n"module1"
+\n\n\n\n(similarly\nfor\nother\nreferent\ntypes)
+:class:`Foo`\n-\nclass\nFoo
+:meth:`Class.method1`\n-\nmethod1\nin\nClass
+:meth:`~Class.method1`\n-\nmethod1\nin\nClass,\nbut\nrendered\njust\nas\n"method1()",
+\n\n\n\nnot\n"Class.method1()"
+:meth:`title\n<method1>`\n-\nreference\nmethod1,\nbut\nrender\nas\n"title"\n(use\nonly
+\n\n\n\nif\nreally\nneeded)
+:mod:`module1`\n-\nmodule\nmodule1
+
+`symbol`\n-\ngeneric\nxref\nsyntax\nwhich\ncan\nreplace\nany\nof\nthe\nabove\nin\ncase
+\n\n\n\nthe\nxref\nis\nunambiguous.\nIf\nthere's\nambiguity,\nthere\nwill\nbe\na\nwarning
+\n\n\n\nduring\ndocs\ngeneration,\nwhich\nneed\nto\nbe\nfixed\nusing\none\nof\nthe\nsyntaxes
+\n\n\n\nabove
+```
+
+*\nCross-referencing\narbitrary\nlocations
 ~~~
-.. _xref_target:
+..\n_xref_target:
 
-Normal non-indented text.
+Normal\nnon-indented\ntext.
 
-This is :ref:`reference <xref_target>`.
+This\nis\n:ref:`reference\n<xref_target>`.
 
-(If xref target is followed by section title, can be just
+(If\nxref\ntarget\nis\nfollowed\nby\nsection\ntitle,\ncan\nbe\njust
 :ref:`xref_target`).
 ~~~
 
-* Linking to external URL:
+*\nLinking\nto\nexternal\nURL:
 ```
-`link text <http://foo.com/...>`_
-```
-
-* Referencing builtin singleton objects:
-```
-``None``, ``True``, ``False``
+`link\ntext\n<http://foo.com/...>`_
 ```
 
-* Use following syntax to create common description for more than one element:
+*\nReferencing\nbuiltin\nsingleton\nobjects:
+```
+``None``,\n``True``,\n``False``
+```
+
+*\nUse\nfollowing\nsyntax\nto\ncreate\ncommon\ndescription\nfor\nmore\nthan\none\nelement:
 ~~~
-.. function:: foo(x)
-              bar(y)
+..\nfunction::\nfoo(x)
+\n\n\n\n\n\n\n\n\n\n\n\n\n\nbar(y)
 
-   Description common to foo() and bar().
+\n\n\nDescription\ncommon\nto\nfoo()\nand\nbar().
 ~~~
 
 
-More detailed guides and quickrefs:
+More\ndetailed\nguides\nand\nquickrefs:
 
-* http://www.sphinx-doc.org/en/stable/rest.html
-* http://www.sphinx-doc.org/en/stable/markup/inline.html
-* http://docutils.sourceforge.net/docs/user/rst/quickref.html
+*\nhttp://www.sphinx-doc.org/en/stable/rest.html
+*\nhttp://www.sphinx-doc.org/en/stable/markup/inline.html
+*\nhttp://docutils.sourceforge.net/docs/user/rst/quickref.html

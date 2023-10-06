@@ -21,7 +21,7 @@ MICROPY_ROM_TEXT_COMPRESSION ?= 0
 
 # Set CFLAGS for the MicroPython build.
 CFLAGS += -I. -I$(TOP) -I$(BUILD) -I$(MICROPYTHON_EMBED_PORT)
-CFLAGS += -Wall -Werror -std=c99
+CFLAGS += -Wall -std=c99
 
 # Define the required generated header files.
 GENHDR_OUTPUT = $(addprefix $(BUILD)/genhdr/, \
@@ -52,7 +52,7 @@ micropython-embed-package: $(GENHDR_OUTPUT)
 	$(ECHO) "- py"
 	$(Q)$(CP) $(TOP)/py/*.[ch] $(PACKAGE_DIR)/py
 	$(ECHO) "- extmod"
-	$(Q)$(CP) $(TOP)/extmod/modplatform.h $(PACKAGE_DIR)/extmod
+	$(Q)$(CP) $(TOP)/extmod/*.h $(PACKAGE_DIR)/extmod
 	$(ECHO) "- shared"
 	$(Q)$(CP) $(TOP)/shared/runtime/gchelper.h $(PACKAGE_DIR)/shared/runtime
 	$(Q)$(CP) $(TOP)/shared/runtime/gchelper_generic.c $(PACKAGE_DIR)/shared/runtime

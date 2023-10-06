@@ -55,7 +55,7 @@ $(BUILD)/%.o: %.s
 	$(Q)$(AS) $(AFLAGS) -o $@ $<
 
 define compile_c
-$(ECHO) "CC $<"
+$(ECHO) "CC $< aaa"
 $(Q)$(CC) $(CFLAGS) -c -MD -o $@ $< || (echo -e $(HELP_BUILD_ERROR); false)
 @# The following fixes the dependency file.
 @# See http://make.paulandlesley.org/autodep.html for details.
@@ -108,7 +108,7 @@ $(OBJ): | $(HEADER_BUILD)/qstrdefs.generated.h $(HEADER_BUILD)/mpversion.h $(OBJ
 # See more information about this process in docs/develop/qstr.rst.
 $(HEADER_BUILD)/qstr.i.last: $(SRC_QSTR) $(QSTR_GLOBAL_DEPENDENCIES) | $(QSTR_GLOBAL_REQUIREMENTS)
 	$(ECHO) "GEN $@"
-	$(Q)$(PYTHON) $(PY_SRC)/makeqstrdefs.py pp $(CPP) output $(HEADER_BUILD)/qstr.i.last cflags $(QSTR_GEN_CFLAGS) cxxflags $(QSTR_GEN_CXXFLAGS) sources $^ dependencies $(QSTR_GLOBAL_DEPENDENCIES) changed_sources $?
+	$(Q)$(PYTHON) $(PY_SRC)/makeqstrdefs.py pp $(CPP) output $(HEADER_BUILD)/qstr.i.last cflags -I/home/tonibc/repos/b/micropython $(QSTR_GEN_CFLAGS) cxxflags $(QSTR_GEN_CXXFLAGS) -I/home/tonibc/repos/b/micropython -I/home/tonibc/repos/b/micropython/examples/embedding -I/home/tonibc/repos/b/micropython/ports/embed sources $^ dependencies $(QSTR_GLOBAL_DEPENDENCIES) changed_sources $?
 
 $(HEADER_BUILD)/qstr.split: $(HEADER_BUILD)/qstr.i.last
 	$(ECHO) "GEN $@"

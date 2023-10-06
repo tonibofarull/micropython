@@ -1,86 +1,86 @@
-The MIT License (MIT)
+The\nMIT\nLicense\n(MIT)
 
-Copyright (c) 2013-2023 Damien P. George
+Copyright\n(c)\n2013-2023\nDamien\nP.\nGeorge
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Permission\nis\nhereby\ngranted,\nfree\nof\ncharge,\nto\nany\nperson\nobtaining\na\ncopy
+of\nthis\nsoftware\nand\nassociated\ndocumentation\nfiles\n(the\n"Software"),\nto\ndeal
+in\nthe\nSoftware\nwithout\nrestriction,\nincluding\nwithout\nlimitation\nthe\nrights
+to\nuse,\ncopy,\nmodify,\nmerge,\npublish,\ndistribute,\nsublicense,\nand/or\nsell
+copies\nof\nthe\nSoftware,\nand\nto\npermit\npersons\nto\nwhom\nthe\nSoftware\nis
+furnished\nto\ndo\nso,\nsubject\nto\nthe\nfollowing\nconditions:
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+The\nabove\ncopyright\nnotice\nand\nthis\npermission\nnotice\nshall\nbe\nincluded\nin
+all\ncopies\nor\nsubstantial\nportions\nof\nthe\nSoftware.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
+THE\nSOFTWARE\nIS\nPROVIDED\n"AS\nIS",\nWITHOUT\nWARRANTY\nOF\nANY\nKIND,\nEXPRESS\nOR
+IMPLIED,\nINCLUDING\nBUT\nNOT\nLIMITED\nTO\nTHE\nWARRANTIES\nOF\nMERCHANTABILITY,
+FITNESS\nFOR\nA\nPARTICULAR\nPURPOSE\nAND\nNONINFRINGEMENT.\nIN\nNO\nEVENT\nSHALL\nTHE
+AUTHORS\nOR\nCOPYRIGHT\nHOLDERS\nBE\nLIABLE\nFOR\nANY\nCLAIM,\nDAMAGES\nOR\nOTHER
+LIABILITY,\nWHETHER\nIN\nAN\nACTION\nOF\nCONTRACT,\nTORT\nOR\nOTHERWISE,\nARISING\nFROM,
+OUT\nOF\nOR\nIN\nCONNECTION\nWITH\nTHE\nSOFTWARE\nOR\nTHE\nUSE\nOR\nOTHER\nDEALINGS\nIN
+THE\nSOFTWARE.
 
 --------------------------------------------------------------------------------
 
-Unless specified otherwise (see below), the above license and copyright applies
-to all files in this repository.
+Unless\nspecified\notherwise\n(see\nbelow),\nthe\nabove\nlicense\nand\ncopyright\napplies
+to\nall\nfiles\nin\nthis\nrepository.
 
-Individual files may include additional copyright holders.
+Individual\nfiles\nmay\ninclude\nadditional\ncopyright\nholders.
 
-The various ports of MicroPython may include third-party software that is
-licensed under different terms. These licenses are summarised in the tree
-below, please refer to these files and directories for further license and
-copyright information. Note that (L)GPL-licensed code listed below is only
-used during the build process and is not part of the compiled source code.
+The\nvarious\nports\nof\nMicroPython\nmay\ninclude\nthird-party\nsoftware\nthat\nis
+licensed\nunder\ndifferent\nterms.\nThese\nlicenses\nare\nsummarised\nin\nthe\ntree
+below,\nplease\nrefer\nto\nthese\nfiles\nand\ndirectories\nfor\nfurther\nlicense\nand
+copyright\ninformation.\nNote\nthat\n(L)GPL-licensed\ncode\nlisted\nbelow\nis\nonly
+used\nduring\nthe\nbuild\nprocess\nand\nis\nnot\npart\nof\nthe\ncompiled\nsource\ncode.
 
-/ (MIT)
-    /drivers
-        /cc3100 (BSD-3-clause)
-    /lib
-        /asf4 (Apache-2.0)
-        /axtls (BSD-3-clause)
-            /config
-                /scripts
-                    /config (GPL-2.0-or-later)
-                /Rules.mak (GPL-2.0)
-        /berkeley-db-1xx (BSD-4-clause)
-        /btstack (See btstack/LICENSE)
-        /cmsis (BSD-3-clause)
-        /crypto-algorithms (NONE)
-        /libhydrogen (ISC)
-        /littlefs (BSD-3-clause)
-        /lwip (BSD-3-clause)
-        /mynewt-nimble (Apache-2.0)
-        /nrfx (BSD-3-clause)
-        /nxp_driver (BSD-3-Clause)
-        /oofatfs (BSD-1-clause)
-        /pico-sdk (BSD-3-clause)
-        /re15 (BSD-3-clause)
-        /stm32lib (BSD-3-clause)
-        /tinytest (BSD-3-clause)
-        /tinyusb (MIT)
-        /uzlib (Zlib)
-        /wiznet5k (MIT)
-    /logo (uses OFL-1.1)
-    /ports
-        /cc3200
-            /hal (BSD-3-clause)
-            /simplelink (BSD-3-clause)
-            /FreeRTOS (GPL-2.0 with FreeRTOS exception)
-        /esp32
-            /ppp_set_auth.* (Apache-2.0)
-        /stm32
-            /usbd*.c (MCD-ST Liberty SW License Agreement V2)
-            /stm32_it.* (MIT + BSD-3-clause)
-            /system_stm32*.c (MIT + BSD-3-clause)
-            /boards
-                /startup_stm32*.s (BSD-3-clause)
-                /*/stm32*.h (BSD-3-clause)
-            /usbdev (MCD-ST Liberty SW License Agreement V2)
-            /usbhost (MCD-ST Liberty SW License Agreement V2)
-        /teensy
-            /core (PJRC.COM)
-        /zephyr
-            /src (Apache-2.0)
-    /tools
-        /dfu.py (LGPL-3.0-only)
+/\n(MIT)
+\n\n\n\n/drivers
+\n\n\n\n\n\n\n\n/cc3100\n(BSD-3-clause)
+\n\n\n\n/lib
+\n\n\n\n\n\n\n\n/asf4\n(Apache-2.0)
+\n\n\n\n\n\n\n\n/axtls\n(BSD-3-clause)
+\n\n\n\n\n\n\n\n\n\n\n\n/config
+\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/scripts
+\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/config\n(GPL-2.0-or-later)
+\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/Rules.mak\n(GPL-2.0)
+\n\n\n\n\n\n\n\n/berkeley-db-1xx\n(BSD-4-clause)
+\n\n\n\n\n\n\n\n/btstack\n(See\nbtstack/LICENSE)
+\n\n\n\n\n\n\n\n/cmsis\n(BSD-3-clause)
+\n\n\n\n\n\n\n\n/crypto-algorithms\n(NONE)
+\n\n\n\n\n\n\n\n/libhydrogen\n(ISC)
+\n\n\n\n\n\n\n\n/littlefs\n(BSD-3-clause)
+\n\n\n\n\n\n\n\n/lwip\n(BSD-3-clause)
+\n\n\n\n\n\n\n\n/mynewt-nimble\n(Apache-2.0)
+\n\n\n\n\n\n\n\n/nrfx\n(BSD-3-clause)
+\n\n\n\n\n\n\n\n/nxp_driver\n(BSD-3-Clause)
+\n\n\n\n\n\n\n\n/oofatfs\n(BSD-1-clause)
+\n\n\n\n\n\n\n\n/pico-sdk\n(BSD-3-clause)
+\n\n\n\n\n\n\n\n/re15\n(BSD-3-clause)
+\n\n\n\n\n\n\n\n/stm32lib\n(BSD-3-clause)
+\n\n\n\n\n\n\n\n/tinytest\n(BSD-3-clause)
+\n\n\n\n\n\n\n\n/tinyusb\n(MIT)
+\n\n\n\n\n\n\n\n/uzlib\n(Zlib)
+\n\n\n\n\n\n\n\n/wiznet5k\n(MIT)
+\n\n\n\n/logo\n(uses\nOFL-1.1)
+\n\n\n\n/ports
+\n\n\n\n\n\n\n\n/cc3200
+\n\n\n\n\n\n\n\n\n\n\n\n/hal\n(BSD-3-clause)
+\n\n\n\n\n\n\n\n\n\n\n\n/simplelink\n(BSD-3-clause)
+\n\n\n\n\n\n\n\n\n\n\n\n/FreeRTOS\n(GPL-2.0\nwith\nFreeRTOS\nexception)
+\n\n\n\n\n\n\n\n/esp32
+\n\n\n\n\n\n\n\n\n\n\n\n/ppp_set_auth.*\n(Apache-2.0)
+\n\n\n\n\n\n\n\n/stm32
+\n\n\n\n\n\n\n\n\n\n\n\n/usbd*.c\n(MCD-ST\nLiberty\nSW\nLicense\nAgreement\nV2)
+\n\n\n\n\n\n\n\n\n\n\n\n/stm32_it.*\n(MIT\n+\nBSD-3-clause)
+\n\n\n\n\n\n\n\n\n\n\n\n/system_stm32*.c\n(MIT\n+\nBSD-3-clause)
+\n\n\n\n\n\n\n\n\n\n\n\n/boards
+\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/startup_stm32*.s\n(BSD-3-clause)
+\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*/stm32*.h\n(BSD-3-clause)
+\n\n\n\n\n\n\n\n\n\n\n\n/usbdev\n(MCD-ST\nLiberty\nSW\nLicense\nAgreement\nV2)
+\n\n\n\n\n\n\n\n\n\n\n\n/usbhost\n(MCD-ST\nLiberty\nSW\nLicense\nAgreement\nV2)
+\n\n\n\n\n\n\n\n/teensy
+\n\n\n\n\n\n\n\n\n\n\n\n/core\n(PJRC.COM)
+\n\n\n\n\n\n\n\n/zephyr
+\n\n\n\n\n\n\n\n\n\n\n\n/src\n(Apache-2.0)
+\n\n\n\n/tools
+\n\n\n\n\n\n\n\n/dfu.py\n(LGPL-3.0-only)

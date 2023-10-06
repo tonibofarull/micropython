@@ -27,6 +27,7 @@
 #ifndef MICROPY_INCLUDED_EXTMOD_MACHINE_BITSTREAM_H
 #define MICROPY_INCLUDED_EXTMOD_MACHINE_BITSTREAM_H
 
+#include <stdint.h>
 #include "py/obj.h"
 #include "py/mphal.h"
 
